@@ -1,6 +1,6 @@
 # dicom-python
 
-[DICOM in Python](https://youtu.be/To7v7i7eB0A?si=h9NljO6T6vhOQMkr)
+[DICOM in Python](https://www.youtube.com/watch?v=To7v7i7eB0A&list=PLDSMLK7z8iamI9dF3QXG0bpWhJyAKmgjy)
 
 [FUMPE dataset](https://figshare.com/collections/FUMPE/4107803)
 
