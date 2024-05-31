@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from pydicom import dcmread
 
-path = "./img/D0001.dcm"
+path = "./img/D0006.dcm"
 
 x = dcmread(path)
 # print(x)  # DICOM file structure
