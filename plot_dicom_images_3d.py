@@ -13,7 +13,7 @@ ct_images = os.listdir(path)
 slices = [dicom.read_file(path + '/' + s, force=True) for s in ct_images]
 
 # Sort the slices based on their ImagePositionPatient attribute to ensure correct order
-# slices = sorted(slices, key=lambda x: x.ImagePositionPatient[2])
+slices = sorted(slices, key=lambda x: x.ImagePositionPatient[2])
 
 # Extract pixel spacing and slice thickness from the first slice
 pixel_spacing = slices[0].PixelSpacing
