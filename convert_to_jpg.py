@@ -5,8 +5,8 @@ import pydicom as dicom
 from PIL import Image
 
 
-def convert(directory):
-    im = dicom.dcmread('./img/' + directory)
+def convert(filename):
+    im = dicom.dcmread('./img/' + filename)
     im = im.pixel_array.astype(float)
     # Normalize the pixel values to the range [0, 1] and scale them to [0, 255]
     rescaled_image = (np.maximum(im, 0) / im.max()) * 255
