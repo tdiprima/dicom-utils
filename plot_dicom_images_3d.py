@@ -70,5 +70,5 @@ coronal.set_aspect(coronal_aspect_ratio)
 plt.show()
 
 # Print the shape of a 2D slice and the 3D volume for reference
-print(array2D.shape)
-print(volume3d.shape)
+print("array2D shape:", array2D.shape)
+print("volume3d shape:", volume3d.shape)
