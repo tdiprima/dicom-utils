@@ -1,4 +1,6 @@
-# dicom-python
+# dicom-utils
+
+A collection of Python scripts and tools for decompressing, converting, extracting metadata, and processing DICOM medical imaging files efficiently.
 
 [DICOM in Python](https://www.youtube.com/watch?v=To7v7i7eB0A&list=PLDSMLK7z8iamI9dF3QXG0bpWhJyAKmgjy)
 

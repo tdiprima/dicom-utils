@@ -1,4 +1,15 @@
-# Convert DICOM Image to an Uncompressed Format
+"""
+Convert DICOM Image to an Uncompressed Format
+
+Author: tdiprima
+Version: 1.0
+License: MIT
+"""
+
+__author__ = 'tdiprima'
+__version__ = '1.0'
+__license__ = 'MIT'
+
 import pydicom
 
 # Read DICOM file

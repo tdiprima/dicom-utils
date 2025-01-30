@@ -1,6 +1,5 @@
 #!/bin/bash
-
-# check_jpeg_dicom.sh
+# ./check_jpeg_dicom.sh file.dcm
 # Script to check if a DICOM file is JPEG-compressed.
 
 # List of JPEG-compressed Transfer Syntax UIDs

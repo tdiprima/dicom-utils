@@ -1,7 +1,14 @@
 """
-This script detects pixel data in a batch of DICOM files and decompresses those requiring decompression.
+Detects pixel data in a batch of DICOM files and decompresses those requiring decompression.
+
+Author: tdiprima
+Version: 1.0
+License: MIT
 """
+
 __author__ = 'tdiprima'
+__version__ = '1.0'
+__license__ = 'MIT'
 
 import os
 
@@ -50,6 +57,6 @@ def process_dicom_directory(input_dir, output_dir):
 
 
 if __name__ == "__main__":
-    input_directory = "path/to/dicom/files"
-    output_directory = "path/to/decompressed/files"
+    input_directory = "img"
+    output_directory = "decompressed"
     process_dicom_directory(input_directory, output_directory)
