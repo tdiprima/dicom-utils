@@ -1,3 +1,4 @@
+# Reads DICOM files from a specified directory and writes their elements' group, element, description, Value Representation, and value to a CSV file.
 import csv
 import os
 
@@ -6,8 +7,8 @@ import pydicom as dicom
 data_dir = "./img"  # Directory containing the DICOM files
 patients = os.listdir(data_dir)  # List all files in the data directory
 
-with open('file2.csv', 'w') as myfile:  # Open a new CSV file to write data
-    writer = csv.writer(myfile)  # Create a CSV writer object
+with open('file2.csv', 'w') as my_file:  # Open a new CSV file to write data
+    writer = csv.writer(my_file)  # Create a CSV writer object
     # Write the header row to the CSV file
     writer.writerow("Group Elem Description VR Value".split())
 

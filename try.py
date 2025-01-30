@@ -1,3 +1,8 @@
+"""
+Reads DICOM images from a specified directory, checks if they have the 'ImagePositionPatient' attribute, sorts them
+based on this attribute, constructs a 3D volume from the slices, calculates different aspect ratios, and plots axial,
+sagittal, and coronal views of the image data.
+"""
 import os
 
 import matplotlib.pyplot as plt

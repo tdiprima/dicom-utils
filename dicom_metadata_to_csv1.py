@@ -1,8 +1,9 @@
+# Reads a DICOM file, extracts its elements, and writes them into a CSV file along with their group, element, description, VR, and value.
 import csv
 
 import pydicom as dicom
 
-ds = dicom.dcmread("./img/D0001.dcm")  # read one file
+ds = dicom.dcmread("./img/dicom_file.dcm")  # read one file
 
 with open('file1.csv', 'w', newline='') as csvfile:
     # Create a CSV writer object

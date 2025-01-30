@@ -1,3 +1,5 @@
+# Converts DICOM images in the 'img' directory to JPG format and saves them in the 'JPG_IMG' directory.
+# python convert_to_jpg.py dicom_file.dcm
 import os
 
 import numpy as np

@@ -2,8 +2,7 @@
 .vscode/
 .idea/
 .ipynb_checkpoints/
-img/
 .pytest_cache/
 __pycache__/
-JPG_IMG/
 file*.csv
+img/dicom1.dcm
