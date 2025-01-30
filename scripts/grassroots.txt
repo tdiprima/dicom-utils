@@ -1,0 +1,12 @@
+GDCM (Grassroots DICOM) has been successfully installed on your MacOS system, and gdcmdump is now available at `/usr/local/bin/gdcmdump`.
+The installation was completed using Homebrew.
+
+You can now use gdcmdump to analyze and dump DICOM files. The basic usage is:
+
+gdcmdump [options] input.dcm
+
+Some common options include:
+- `-d` or `--dump`: dump complete file
+- `-p` or `--print`: print simple DICOM info
+- `-C` or `--csa`: print CSA Module (Siemens specific)
+- `-P` or `--pdb`: print PDB (GEMS specific)
