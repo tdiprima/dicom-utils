@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 try:
     # Verbose reading with error handling
-    dicom_file = pydicom.dcmread('file.dcm',
+    dicom_file = pydicom.dcmread('img/dicom_file.dcm',
                                  force=True,  # Force reading even with minor issues
                                  specific_tags=None)  # Read all tags
     print(dicom_file)

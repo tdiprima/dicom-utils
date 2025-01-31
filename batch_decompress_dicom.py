@@ -50,6 +50,6 @@ def process_dicom_directory(input_dir, output_dir):
 
 
 if __name__ == "__main__":
-    input_directory = "path/to/dicom/files"
-    output_directory = "path/to/decompressed/files"
+    input_directory = "img"
+    output_directory = "decompressed"
     process_dicom_directory(input_directory, output_directory)
