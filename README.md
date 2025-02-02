@@ -9,3 +9,8 @@ A collection of Python scripts and tools for decompressing, converting, extracti
 [Sample DICOM Files](https://www.rubomedical.com/dicom_files/)
 
 [Full Preprocessing Tutorial](https://www.kaggle.com/code/gzuidhof/full-preprocessing-tutorial)
+
+---
+
+This project may include third-party open-source code, subject to its original licenses.
+If there is a licensing concern, please open an issue.

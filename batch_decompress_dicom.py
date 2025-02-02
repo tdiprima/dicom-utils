@@ -1,7 +1,14 @@
 """
-This script detects pixel data in a batch of DICOM files and decompresses those requiring decompression.
+Detects pixel data in a batch of DICOM files and decompresses those requiring decompression.
+
+Author: tdiprima
+Version: 1.0
+License: MIT
 """
+
 __author__ = 'tdiprima'
+__version__ = '1.0'
+__license__ = 'MIT'
 
 import os
 

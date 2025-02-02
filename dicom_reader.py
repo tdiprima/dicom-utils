@@ -1,7 +1,14 @@
 """
 Reads and validates DICOM files using Python, ensuring the file format is correct and handling errors robustly.
+
+Author: tdiprima
+Version: 1.0
+License: MIT
 """
+
 __author__ = 'tdiprima'
+__version__ = '1.0'
+__license__ = 'MIT'
 
 import logging
 

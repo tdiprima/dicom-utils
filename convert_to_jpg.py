@@ -1,4 +1,4 @@
-# Converts DICOM images in the 'img' directory to JPG format and saves them in the 'JPG_IMG' directory.
+# Converts DICOM images in the 'img' directory to JPG format and saves them in the 'jpg_img' directory.
 import os
 
 import numpy as np

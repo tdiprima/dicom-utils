@@ -2,8 +2,15 @@
 Read a directory of DICOM files, extract the "Accession Number" (tag "0008,0050"),
 and write it to a text file called accession_list.txt, ensuring each accession number is unique.
 Uses multiprocessing to utilize all available CPU cores.
+
+Author: tdiprima
+Version: 1.0
+License: MIT
 """
+
 __author__ = 'tdiprima'
+__version__ = '1.0'
+__license__ = 'MIT'
 
 import os
 import pydicom

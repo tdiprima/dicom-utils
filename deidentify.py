@@ -1,5 +1,14 @@
-# Removes or anonymizes all patient-identifiable information while maintaining the integrity of the image and metadata necessary for analysis
+"""
+Removes or anonymizes all patient-identifiable information while maintaining the integrity of the image and metadata necessary for analysis
+
+Author: tdiprima
+Version: 1.0
+License: MIT
+"""
+
 __author__ = 'tdiprima'
+__version__ = '1.0'
+__license__ = 'MIT'
 
 import datetime
 

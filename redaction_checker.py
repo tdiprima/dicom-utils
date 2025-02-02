@@ -1,5 +1,14 @@
-# Load a DICOM file, check all sensitive fields, and print any field that was NOT properly redacted.
+"""
+Loads a DICOM file, checks all sensitive fields, and prints any field that was NOT properly redacted.
+
+Author: tdiprima
+Version: 1.0
+License: MIT
+"""
+
 __author__ = 'tdiprima'
+__version__ = '1.0'
+__license__ = 'MIT'
 
 import pydicom
 
