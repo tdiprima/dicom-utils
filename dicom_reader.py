@@ -6,9 +6,9 @@ Version: 1.0
 License: MIT
 """
 
-__author__ = 'tdiprima'
-__version__ = '1.0'
-__license__ = 'MIT'
+__author__ = "tdiprima"
+__version__ = "1.0"
+__license__ = "MIT"
 
 import logging
 
@@ -19,11 +19,15 @@ logging.basicConfig(level=logging.DEBUG)
 
 try:
     # Verbose reading with error handling
-    dicom_file = pydicom.dcmread('img/dicom_file.dcm',
-                                 force=True,  # Force reading even with minor issues
-                                 specific_tags=None)  # Read all tags
+    dicom_file = pydicom.dcmread(
+        "img/dicom_file.dcm",
+        force=True,  # Force reading even with minor issues
+        specific_tags=None,
+    )  # Read all tags
     print(dicom_file)
 except Exception as e:
     logging.error(f"DICOM reading failed: {e}")
     # Additional diagnostic information
-    print(f"File details: {dicom_file.filename if 'dicom_file' in locals() else 'No file read'}")
+    print(
+        f"File details: {dicom_file.filename if 'dicom_file' in locals() else 'No file read'}"
+    )

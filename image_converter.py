@@ -7,7 +7,7 @@ from PIL import Image
 
 
 def convert_image_to_jpg(filename):
-    im = dicom.dcmread('./img/' + filename)
+    im = dicom.dcmread("./img/" + filename)
     im = im.pixel_array.astype(float)
     # Normalize the pixel values to the range [0, 1] and scale them to [0, 255]
     rescaled_image = (np.maximum(im, 0) / im.max()) * 255
@@ -24,4 +24,4 @@ if __name__ == "__main__":
 
     for name in arr_filename:
         image = convert_image_to_jpg(name)
-        image.save('./processed_images/' + name + '.jpg')
+        image.save("./processed_images/" + name + ".jpg")

@@ -6,11 +6,12 @@ Version: 1.0
 License: MIT
 """
 
-__author__ = 'tdiprima'
-__version__ = '1.0'
-__license__ = 'MIT'
+__author__ = "tdiprima"
+__version__ = "1.0"
+__license__ = "MIT"
 
 import os
+from pathlib import Path
 
 from pydicom import dcmread
 from pydicom.filewriter import write_file
@@ -46,7 +47,7 @@ def decompress_dicom(dicom_file, output_dir):
 
 
 def process_dicom_directory(input_dir, output_dir):
-    os.makedirs(output_dir, exist_ok=True)
+    Path(output_dir).mkdir(exist_ok=True, parents=True)
     for root, _, files in os.walk(input_dir):
         for file in files:
             dicom_path = os.path.join(root, file)

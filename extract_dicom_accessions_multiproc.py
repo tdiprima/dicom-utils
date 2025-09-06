@@ -8,13 +8,14 @@ Version: 1.0
 License: MIT
 """
 
-__author__ = 'tdiprima'
-__version__ = '1.0'
-__license__ = 'MIT'
+__author__ = "tdiprima"
+__version__ = "1.0"
+__license__ = "MIT"
 
 import os
+from multiprocessing import Pool, cpu_count
+
 import pydicom
-from multiprocessing import Pool, cpu_count, Manager
 
 
 def process_dicom_file(args):
@@ -52,13 +53,15 @@ def extract_accession_numbers_parallel(dicom_dir, output_file, affix):
 
     # Use multiprocessing Pool to process files in parallel
     with Pool(processes=cpu_count()) as pool:
-        results = pool.map(process_dicom_file, [(file_path, affix) for file_path in file_paths])
+        results = pool.map(
+            process_dicom_file, [(file_path, affix) for file_path in file_paths]
+        )
 
     # Filter out None values and keep only unique accession numbers
     unique_accession_numbers = set(filter(None, results))
 
     # Write unique accession numbers to the output file
-    with open(output_file, 'w') as f:
+    with open(output_file, "w") as f:
         for accession_number in unique_accession_numbers:
             f.write(f"{accession_number}\n")
 

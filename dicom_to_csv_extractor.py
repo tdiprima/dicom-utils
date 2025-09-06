@@ -6,7 +6,7 @@ import pydicom as dicom
 
 def extract_dicom_metadata(input_file: str, output_csv: str = "dicom_metadata.csv"):
     ds = dicom.dcmread(input_file)  # read one file
-    with open(output_csv, 'w', newline='') as csvfile:
+    with open(output_csv, "w", newline="") as csvfile:
         # Create a CSV writer object
         writer = csv.writer(csvfile)
 
@@ -17,7 +17,14 @@ def extract_dicom_metadata(input_file: str, output_csv: str = "dicom_metadata.cs
         for elem in ds:
             # Format integer as zero-padded hexadecimal number
             writer.writerow(
-                [f"{elem.tag.group:04x}", f"{elem.tag.element:04x}", elem.description(), elem.VR, str(elem.value)])
+                [
+                    f"{elem.tag.group:04x}",
+                    f"{elem.tag.element:04x}",
+                    elem.description(),
+                    elem.VR,
+                    str(elem.value),
+                ]
+            )
 
 
 if __name__ == "__main__":

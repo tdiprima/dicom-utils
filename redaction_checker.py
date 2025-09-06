@@ -6,9 +6,9 @@ Version: 1.0
 License: MIT
 """
 
-__author__ = 'tdiprima'
-__version__ = '1.0'
-__license__ = 'MIT'
+__author__ = "tdiprima"
+__version__ = "1.0"
+__license__ = "MIT"
 
 import pydicom
 
@@ -24,23 +24,59 @@ def check_redacted_dicom(dicom_file):
     dicom_data = pydicom.dcmread(dicom_file)
 
     # List of sensitive fields that should be redacted
-    sensitive_tags = ["PatientName", "PatientID", "PatientBirthDate", "PatientSex", "PatientAddress",
-        "ReferringPhysicianName", "StudyDescription", "SeriesDescription", "AccessionNumber", "OtherPatientIDs",
-        "OtherPatientNames", "InstitutionName", "InstitutionAddress", "InstitutionalDepartmentName",
-        "PerformingPhysicianName", "ReferringPhysicianName", "PhysiciansOfRecord",
-        "OperatorsName", "RequestingPhysician", "NameOfPhysiciansReadingStudy",
-        "ConsultingPhysicianName", "ResponsiblePerson", "RequestingService", "AdmittingDiagnosesDescription",
-        "MedicalAlerts", "Allergies", "PatientInsurancePlanCodeSequence", "DerivationDescription",
-        "PerformedProcedureStepDescription", "ScheduledPerformingPhysicianName", "ResponsibleOrganization", "StudyDate",
-        "SeriesDate", "AcquisitionDate", "ContentDate", "StudyTime", "SeriesTime", "AcquisitionTime", "ContentTime"]
+    sensitive_tags = [
+        "PatientName",
+        "PatientID",
+        "PatientBirthDate",
+        "PatientSex",
+        "PatientAddress",
+        "ReferringPhysicianName",
+        "StudyDescription",
+        "SeriesDescription",
+        "AccessionNumber",
+        "OtherPatientIDs",
+        "OtherPatientNames",
+        "InstitutionName",
+        "InstitutionAddress",
+        "InstitutionalDepartmentName",
+        "PerformingPhysicianName",
+        "ReferringPhysicianName",
+        "PhysiciansOfRecord",
+        "OperatorsName",
+        "RequestingPhysician",
+        "NameOfPhysiciansReadingStudy",
+        "ConsultingPhysicianName",
+        "ResponsiblePerson",
+        "RequestingService",
+        "AdmittingDiagnosesDescription",
+        "MedicalAlerts",
+        "Allergies",
+        "PatientInsurancePlanCodeSequence",
+        "DerivationDescription",
+        "PerformedProcedureStepDescription",
+        "ScheduledPerformingPhysicianName",
+        "ResponsibleOrganization",
+        "StudyDate",
+        "SeriesDate",
+        "AcquisitionDate",
+        "ContentDate",
+        "StudyTime",
+        "SeriesTime",
+        "AcquisitionTime",
+        "ContentTime",
+    ]
 
     print("\n🔍 **Checking for unredacted DICOM fields...**\n")
 
     unredacted_fields = []
     for tag in sensitive_tags:
         if tag in dicom_data:
-            value = str(dicom_data[tag].value).strip()  # Convert value to string and remove extra spaces
-            if value and value != "REMOVED":  # Check if the value is not blank and not "REMOVED"
+            value = str(
+                dicom_data[tag].value
+            ).strip()  # Convert value to string and remove extra spaces
+            if (
+                value and value != "REMOVED"
+            ):  # Check if the value is not blank and not "REMOVED"
                 unredacted_fields.append((tag, value))
 
     # Print results
