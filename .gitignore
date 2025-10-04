@@ -5,4 +5,4 @@
 .pytest_cache/
 __pycache__/
 file*.csv
-img/dicom1.dcm
+src/img/dicom1.dcm
