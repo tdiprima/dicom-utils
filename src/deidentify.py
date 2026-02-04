@@ -118,9 +118,7 @@ def deidentify_dicom(input_file, output_file, shift_dates=True):
     for tag in time_tags:
         if tag in dicom_data and dicom_data[tag].value:
             time_value = dicom_data[tag].value
-            if not (
-                len(time_value) == 6 or len(time_value) == 4
-            ):  # Ensure HHMMSS or HHMM format
+            if len(time_value) not in (6, 4):  # Ensure HHMMSS or HHMM format
                 dicom_data[tag].value = ""  # Remove invalid time
 
     # Generate new UIDs for anonymity
