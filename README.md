@@ -104,4 +104,4 @@ convert_image_to_jpg("scan.dcm")
 
 ## License
 
-MIT
+[MIT](LICENSE)
